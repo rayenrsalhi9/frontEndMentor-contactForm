@@ -22,6 +22,8 @@ let allInputElements = [
 
 let submitButton = document.querySelector('#submit-button');
 
+let emailRegex = /\w+@\w+.\w+/ig;
+
 /* Handling click event */
 
 submitButton.addEventListener('click', () => {
@@ -36,7 +38,7 @@ submitButton.addEventListener('click', () => {
         }
     });
     
-    if (!Array.from(email.value).includes('@')) {
+    if (!email.value.match(emailRegex)) {
         email.parentNode.classList.add('false');
     } else if (textArea.value === ''){
         textArea.parentNode.classList.add('false');
