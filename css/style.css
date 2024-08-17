@@ -1,8 +1,7 @@
 body {
     font-family: "Karla", sans-serif;
     background: rgb(227, 238, 212);
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -63,6 +62,27 @@ textarea:focus {
     flex-basis: 50%;
 }
 
+@media (max-width: 991px) {
+    
+    .container .names-inputs {
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: flex-start;
+        gap: 20px;
+    }
+
+    .names-inputs input {
+        width: 100%;
+    }
+
+    .first-name,
+    .last-name {
+    flex-basis: 100%;
+}
+}
+
+
+
 .container .input {
 
     display: flex;
@@ -97,6 +117,13 @@ textarea:focus {
 .choices .choice input {
     width: 25px;
     height: 25px;
+}
+
+@media (max-width: 991px) {
+    .choices {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
 }
 
 /* TextArea */
