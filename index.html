@@ -5,48 +5,99 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <!-- Main css style file -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Responsive breakpoints -->
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Font awesome -->
+  <link rel="stylesheet" href="css/all.min.css">
   
   <title>Frontend Mentor | Contact form</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
+    .attribution { font-size: 11px; text-align: center; margin-top: 20px;}
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
 
-  Contact Us
+  <div class="container">
 
-  First Name
-  This field is required
+    <h1>Contact Us</h1>
 
-  Last Name
-  This field is required
+    <div class="names-inputs">
 
-  Email Address
-  Please enter a valid email address
-  This field is required
+      <div class="input first-name">
+        <label for="first-name">First Name <span class="star">*</span></label>
+        <input type="text">
+        <span class="alert">This field is required</span>
+      </div>
 
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
+      <div class="input last-name">
+        
+        <label for="first-name">Last Name <span class="star">*</span></label>
+        <input type="text">
+        <span class="alert">This field is required</span>
+      </div>
 
-  Message
-  This field is required
+    </div>
 
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
+    <div class="input email-input">
+      
+      <label for="mail">Email Address <span class="star">*</span></label>
+      <input type="email" name="mail" id="mail">
+      <span class="alert">Please enter a valid email address</span>
+    </div>
 
-  Submit
+    <div class="input radio">
 
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
+      <label for="radio-choice">Query Type <span class="star">*</span></label>
+
+      <div class="choices">
+
+        <div class="choice">
+          <input type="radio" name="general-enquiry" id="general-enquiry">General Enquiry
+        </div>
+
+        <div class="choice">
+          <input type="radio" name="support-request" id="support-request">Support Request
+        </div>
+        
+      </div>
+      <span class="alert">Please select a query type</span>
+    </div>
+
+    <div class="input message">
+      
+      <label for="message">Message <span class="star">*</span></label>
+      <textarea name="message" id="message"></textarea>
+      <span class="alert">This field is required</span>
+    </div>
+    
+    <div class="checkbox">
+      <input type="checkbox" name="agreement" id="agreement">I consent to being contacted by the team <span class="star">*</span>
+      <span class="alert">To submit this form, please consent to being contacted</span>
+    </div>
+    
+    <input type="submit" value="Submit" id="submit-button">
+  </div>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/rayenrsalhi9" target="_blank">Salhi Rayen</a>.
   </div>
+
+  <div class="message-sent">
+    <div class="main-message">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" fill="none" viewBox="0 0 20 21"><path fill="#fff" d="M14.28 7.72a.748.748 0 0 1 0 1.06l-5.25 5.25a.748.748 0 0 1-1.06 0l-2.25-2.25a.75.75 0 1 1 1.06-1.06l1.72 1.72 4.72-4.72a.75.75 0 0 1 1.06 0Zm5.47 2.78A9.75 9.75 0 1 1 10 .75a9.76 9.76 0 0 1 9.75 9.75Zm-1.5 0A8.25 8.25 0 1 0 10 18.75a8.26 8.26 0 0 0 8.25-8.25Z"/></svg><p>Message Sent!</p>
+    </div>
+    <p>Thanks for completing the form. We'll be in touch soon!</p>
+  </div>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
